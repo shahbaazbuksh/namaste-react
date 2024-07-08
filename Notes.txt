@@ -1,0 +1,19 @@
+package.json is a configuration for npm, it keeps a track of approx version the package is installed, whereas package-lock.json will have the exact version. node_modules will contain the codes fetched from npm for the dependencies in our project.
+
+We should not put node_modules in git however package.json & package-lock.json should be put in git.
+
+Transitive dependencies means that one dependency will depend on another dependency and so on.
+
+Webpack, parcel & vite these are all bundlers which bundles the files and minified that as well.
+
+(^) caret will update minor update automatically & (~) tilde will update major updates automatically, and if we remove the caret or tilde then it will always have the same version.
+
+We can ignite parcel app by writing: npx parcel index.html.
+
+We use npm when we install any package and we use npx when we execute any package.
+
+Parcel will dev build, run local server, HMR(Hot Module Replacement), File watching algorithm written in c++, caching providing faster builds, image optimization, bundling, compressing, code splitting, differential bundling to support older browsers, error handling, https, tree shaking to remove unused code & minification.
+
+React is not the only reason why react applications are fast it is also because of bundlers such as parcel.
+
+With the help of browserslist package we can set value specific to any country as well.

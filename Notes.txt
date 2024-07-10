@@ -44,3 +44,9 @@ We can write any javascript expression inside jsx by writing it in curly bracket
 We should not call a React component like {MyComponent()} because React components should be used as JSX elements rather than function calls. Calling the component as a function bypasses React's lifecycle methods and hooks, leading to unexpected behavior.
 
 END OF LAYING THE FOUNDATION
+
+Depending on data UI will be different in different locations this is called config driven UI.
+
+When we loop any data using map we should give key attribute and provide unique data to it as it will help react to identify the items at same level and only make changes to necessary item otherwise it will re render all the item if unique key is not provided.
+
+END OF TALK IS CHEAP, SHOW ME THE CODE

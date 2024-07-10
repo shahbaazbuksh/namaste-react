@@ -17,3 +17,30 @@ Parcel will dev build, run local server, HMR(Hot Module Replacement), File watch
 React is not the only reason why react applications are fast it is also because of bundlers such as parcel.
 
 With the help of browserslist package we can set value specific to any country as well.
+
+We need to write "start": "parcel index.html" in package.json and after that we can start application by writing npm start.
+
+React element is an object & when we render this element in dom it is rendered as html element.
+
+JSX is not html it is html like syntax.
+
+const heading = <h1>I am an h1 tag</h1>; this is not pure javascript, it is converted to javascript with the help of babel
+<h1>I am an h1 tag</h1>, this is jsx and heading is react element.
+
+JSX is not directly understood by the browser. It needs to be compiled into regular JavaScript. Tools like Babel are used to transform JSX into JavaScript function calls such as createElement.
+
+Babel is a javascript compiler it converts it converts modern javascript to simple javascript which older browsers can understand.
+
+We write attributes in camelCase in jsx such as className this proves that it is not normal html.
+
+Components is normal javascript function however it should start with capital letter which helps to identify this function as component and it should return jsx.
+
+If heading is an element we can render it like root.render(heading) however if Heading is a component then it will be rendered as root.render(<Heading />).
+
+Putting one component in another component is known as component composition.
+
+We can write any javascript expression inside jsx by writing it in curly brackets and it will also protect from cross site scripting injection.
+
+We should not call a React component like {MyComponent()} because React components should be used as JSX elements rather than function calls. Calling the component as a function bypasses React's lifecycle methods and hooks, leading to unexpected behavior.
+
+END OF LAYING THE FOUNDATION

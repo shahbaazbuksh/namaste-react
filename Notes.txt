@@ -50,3 +50,9 @@ Depending on data UI will be different in different locations this is called con
 When we loop any data using map we should give key attribute and provide unique data to it as it will help react to identify the items at same level and only make changes to necessary item otherwise it will re render all the item if unique key is not provided.
 
 END OF TALK IS CHEAP, SHOW ME THE CODE
+
+Virtual dom is an object representation of actual dom.
+
+With the help of diff/reconciliation algorithm react compares the old virtual dom object with the new virtual dom object and then only change which has updated. This algorithm is now called react fiber after react 16.
+
+React is fast as react perform efficient dom manipulation with the help of react fiber.

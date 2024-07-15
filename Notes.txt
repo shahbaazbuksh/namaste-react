@@ -56,3 +56,13 @@ Virtual dom is an object representation of actual dom.
 With the help of diff/reconciliation algorithm react compares the old virtual dom object with the new virtual dom object and then only change which has updated. This algorithm is now called react fiber after react 16.
 
 React is fast as react perform efficient dom manipulation with the help of react fiber.
+
+Monolith service is a way to write entire code for one program in a single code base whereas in microservices there are individual codes for different reponsibilities such as UI, Backend, auth and so on, these microservices can also be written in different languages such as UI can be written in react & backend in java.
+
+In react once application loads it first render and then make api call and then render again with the updated data. useEffect works the same way first entire app will be loaded and then useEffect will run.
+
+Shimmer UI is the fake UI with no data which resembles the original UI once it has data.
+
+When state variable is changed the entire component gets re rendered however only the part which has changed will be changed in dom others will remain same because of diff algorithm.
+
+Even in form when we type anything and set it via state then entire component gets re rendered.

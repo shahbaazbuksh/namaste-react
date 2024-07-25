@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const styleCard = {
   backgroundColor: "#f0f0f0",
 };
 
 export default function RestaurantCard({ resData }) {
+  const { loggedInUser } = useContext(UserContext);
   const {
     name,
     cloudinaryImageId,
@@ -19,6 +22,20 @@ export default function RestaurantCard({ resData }) {
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars</h4>
       <h4>{deliveryTime} minutes</h4>
+      <h4>User: {loggedInUser} </h4>
     </div>
   );
+}
+
+export function withPromotedLabel(RestaurantCard) {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 }
